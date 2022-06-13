@@ -1,0 +1,18 @@
+<!-- <button (click)="check()">Check</button> -->
+
+<div id="cars" [formGroup]="formGroup">
+  <div *ngFor="let car of cars; let i = index;" formArrayName="cars">
+    <app-details-fields [formControlName]="i"></app-details-fields>
+  </div>
+</div>
+
+
+<pre>
+.value =>
+
+{{ formGroup.value | json }}
+
+.getRawValue() =>
+
+{{ formGroup.getRawValue() | json }}
+</pre>
